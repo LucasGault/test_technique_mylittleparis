@@ -1,0 +1,18 @@
+* {
+  pading: 0;
+  margin: 0;
+}
+
+.openSans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.CTA {
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #fefffe;
+  color: #e35525;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 2px solid #e35525;
+}
