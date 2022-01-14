@@ -66,6 +66,7 @@ export default {
      * Sinon si il manque une information, affiche un message d'erreur.
      */
     submit() {
+      const self = this;
       if (this.form.email && this.form.birthDate) {
         this.form.choice = this.$store.state.pillows_number;
         var data = this.form;
@@ -81,10 +82,10 @@ export default {
         console.log(config);
         axios(config)
           .then(function () {
-            this.$store.commit("saveForm", this.form);
-            this.message = "Vos informations ont bien été sauvegardées, merci";
+            self.$store.commit("saveForm", self.form);
+            self.message = "Vos informations ont bien été sauvegardées, merci";
             setTimeout(() => {
-              this.message = "";
+              self.message = "";
             }, 3000);
             // console.log(JSON.stringify(response.data));
           })
